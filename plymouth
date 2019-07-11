@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=::NAME::
+Description=::NAME::
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/::NAME::
+ScriptFile=/usr/share/plymouth/themes/::NAME::/::NAME::.script
