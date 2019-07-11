@@ -1,4 +1,4 @@
-# This theme is based on Micheal Bearly's Apple Mac Plymouth Bar
+# This theme is based on Micheal Bearly's Apple Mac Plymouth Bar: https://www.opencode.net/mikebearly/apple-mac-plymouth
 
 fun dialog_setup() {
     local.box;
