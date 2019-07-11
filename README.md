@@ -7,7 +7,7 @@ Plymouth-Progress-Bar is a Plymoyth theme featuring a progress bar, available in
 <img src="screenshots/breeze-blue-light/1024x768.png" alt="drawing" width="250"/><img src="screenshots/debian-branded/1024x768.png" alt="drawing" width="250"/><img src="screenshots/fedora-branded/1024x768.png" alt="drawing" width="250"/><img src="screenshots/manjaro-branded/1024x768.png" alt="drawing" width="250"/>
 <img src="screenshots/opensuse-branded/1024x768.png" alt="drawing" width="250"/><img src="screenshots/steam-os-branded/1024x768.png" alt="drawing" width="250"/><img src="screenshots/ubuntu-branded/1024x768.png" alt="drawing" width="250"/>
 
-**[Screenshots folder (including encryption prompt)](https://github.com/1deterministic/Plymouth-Progress-Bar/screenshots)**
+**[Screenshots folder (including encryption prompt)](https://github.com/1deterministic/Plymouth-Progress-Bar/tree/master/screenshots)**
 
 # Building
 Just run `build.sh` from the project folder. It will create a folder called `build`, where all color schemes will be available with their own folders.
