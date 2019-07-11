@@ -3,6 +3,11 @@
 build=./build
 color_schemes=./color-schemes
 
+
+if [ ! -d $build ]; then
+    mkdir $build
+fi
+
 for i in $color_schemes/*;
 do
     for f in $i/*;
@@ -10,7 +15,10 @@ do
         [ -d $f ] && $(
             name=$(basename $f)-$(basename $(dirname $f))
             
-            mkdir $build/$name &&
+            if [ ! -d $build/$name ]; then
+                mkdir $build/$name
+            fi
+
             cp $f/background.png $build/$name &&
             cp $f/box.png $build/$name &&
             cp $f/bullet.png $build/$name &&
