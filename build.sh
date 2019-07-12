@@ -11,8 +11,8 @@ for i in $color_schemes/*;
 do
     for f in $i/*;
     do
-        if [ -d $f ]; then
-            (name=$(basename $f)-$(basename $(dirname $f))
+        if [ -d $f ]; then (
+            name=$(basename $f)-$(basename $(dirname $f))
             
             if [ ! -d $build/$name ]; then
                 mkdir $build/$name
@@ -30,10 +30,16 @@ do
             cp $f/logo.png $build/$name &&
             cp $f/progress-bar.png $build/$name &&
             cp $f/progress-box.png $build/$name &&
+
             sed "s/::NAME::/$name/g" plymouth > $build/$name/$name.plymouth &&
             cat script > $build/$name/$name.script &&
 
-            python3 -B ./create-screenshots.py --path=$build/$name) || exit 1
+            python3 -B ./create-screenshots.py --path=$build/$name &&
+
+            # creates/updates readme screenshots
+            cp $build/$name/screenshots/1024x768.png ./screenshots/$name.png &&
+            cp $build/$name/screenshots/1024x768-encrypted.png ./screenshots/$name-encrypted.png
+            ) || exit 1
         fi
     done;
 done;
